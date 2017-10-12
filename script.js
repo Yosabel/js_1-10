@@ -54,24 +54,62 @@ function front_times(string,n){
     return answer;
 }
 
-// 5. String_bits
-// Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
-// string_bits('Hello') → 'Hlo'
-// string_bits('Hi') → 'H'
-// string_bits('Heeololeo') → 'Hello'
+
 
 function string_bits(string){
     var answer= "";
-  for(var i= 0;i<x;i+2){
-      answer+=string[0,2,4,6];
+  for(var i= 0;i<string.length;i+=2){
+      answer+=answer+string[i];
   }
     return answer;
 
 }
 
+function caughtSpeeding(speed,birthday){
+
+    if(speed<=60 && birthday==true){
+      return 0;
+    }
+    if(speed<=60 && birthday == false) {
+        return 0;
+    }
+    if(speed>=61 && speed<=65 && birthday==true){
+        return 0
+    }
+    if(speed>=61 && speed<=80 && birthday== false){
+      return 1;
+    }
+    if(speed>=61 && speed<81 && birthday==true){
+        return 1;
+    }
+    if(speed>=81 && birthday== false){
+        return 2
+    }
+    if(speed>=81 && birthday==true){
+        return 2
+    }
+}
 function tester(){
-    document.getElementById("output").innerHTML= front_times("love",5);
-    document.getElementById("output1").innerHTML= front_times("camera",3);
-    document.getElementById("output2").innerHTML= front_times("purse",4);
+    document.getElementById("output").innerHTML= fizzBuzz(15);
+    document.getElementById("output1").innerHTML= fizzBuzz(20);
+    document.getElementById("output2").innerHTML= fizzBuzz(18);
     // document.getEelementById("output").innerHTML= (true,true);
+}
+
+
+function fizzBuzz(num){
+    if(num % 5 == 0 && num % 3 == 0){
+        return  " FizzBuzz!";
+    }
+    if (num % 3 == 0){
+        return "Fizz!";
+    }
+    if(num % 5 ==0){
+        return "Buzz!";
+    } else{
+        return num + "!";
+
+    }
+
+
 }
