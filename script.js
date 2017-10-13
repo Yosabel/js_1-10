@@ -89,15 +89,10 @@ function caughtSpeeding(speed,birthday){
         return 2
     }
 }
-function tester(){
-    document.getElementById("output").innerHTML= fizzBuzz(15);
-    document.getElementById("output1").innerHTML= fizzBuzz(20);
-    document.getElementById("output2").innerHTML= fizzBuzz(18);
-    // document.getEelementById("output").innerHTML= (true,true);
-}
 
 
-function fizzBuzz(num){
+
+function fizz_Buzz(num){
     if(num % 5 == 0 && num % 3 == 0){
         return  " FizzBuzz!";
     }
@@ -112,4 +107,72 @@ function fizzBuzz(num){
     }
 
 
+}
+
+
+function teaParty(candy,tea){
+    if(candy<5 || tea<5){
+        return 0;
+    }
+    if(candy >= 2*tea || tea >= 2*candy){
+        return 2;
+    }
+    if(candy >=5 && tea>= 5){
+        return 1;
+    }
+}
+
+
+function blackjack(num,int){
+    num>0;
+    int>0;
+    if(num>21 && int>21){
+        return 0;
+    }
+    if(num>int && num<=21){
+        return num;
+    }
+    if(int>num && int<=21){
+        return int;
+    }
+    if(int> 21){
+        return num;
+    }
+    if(num> 21){
+        return int;
+    }
+}
+// 10. loneSum
+// Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it
+// does not count towards the sum.
+//
+// loneSum(1, 2, 3) → 6       loneSum(3, 2, 3) → 2        loneSum(3, 3, 3) → 0
+
+
+
+function loneSum(a,b,c){
+    if(a==b && a==c) {
+        return 0;
+    }
+    if( a==b) {
+        return c;
+}
+    if(a==c ){
+        return b;
+
+    }
+    if(c==b){
+        return a;
+    }else{
+        return a + b + c;
+    }
+
+}
+
+
+function tester(){
+    document.getElementById("output").innerHTML= loneSum(5,6,2);
+    // document.getElementById("output1").innerHTML= teaParty(20,10);
+    // document.getElementById("output2").innerHTML= teaParty(2,2);
+    // document.getEelementById("output").innerHTML= (true,true);
 }
