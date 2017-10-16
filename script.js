@@ -171,7 +171,7 @@ function loneSum(a,b,c){
 
 
 function tester(){
-    document.getElementById("output").innerHTML= loneSum(5,6,2);
+    document.getElementById("output").innerHTML= teaParty(5,6,);
     // document.getElementById("output1").innerHTML= teaParty(20,10);
     // document.getElementById("output2").innerHTML= teaParty(2,2);
     // document.getEelementById("output").innerHTML= (true,true);
